@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+  <h1>Contact Us</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="mb-3">
+      {{ form.name.label_tag }}
+      {{ form.name|add_class:"form-control" }}
+      {{ form.name.errors }}
+    </div>
+    <div class="mb-3">
+      {{ form.email.label_tag }}
+      {{ form.email|add_class:"form-control" }}
+      {{ form.email.errors }}
+    </div>
+    <div class="mb-3">
+      {{ form.message.label_tag }}
+      {{ form.message|add_class:"form-control" }}
+      {{ form.message.errors }}
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+{% endblock %}
