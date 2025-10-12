@@ -15,7 +15,7 @@ from typing import Callable, Dict, List, Optional, Tuple
 DEFAULT_SYSTEM_PROMPT = r"""
 You are an autonomous reasoning agent running in an iterative loop.
 Your job is to think step-by-step and decide the next best Action to move the task forward.
-You will be repeatedly invoked until you output the special action STOP.
+You will be repeatedly invoked until you output the special action STOP. You can use shell commands for installation
 
 Rules of the Loop
 1) Reason first. Always show your thought process clearly under `Thought:` — break the problem into steps, plan next action, justify your decision.
